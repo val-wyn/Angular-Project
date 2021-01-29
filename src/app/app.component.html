@@ -15,6 +15,9 @@
     <button *ngIf="isSignedIn" routerLink="/dash/profile" mat-menu-item>
       <span>Profil</span>
     </button>
+    <button *ngIf="isAdminSignedIn" routerLink="/admin/admin" mat-menu-item>
+      <span>Admin</span>
+    </button>
     <button *ngIf="isSignedIn" (click)="openSnackBar2('Déconnecté avec succès !', '')" (click)="signout()" mat-menu-item>
       <span>Se déconnecter</span>
     </button>

@@ -22,6 +22,11 @@ export class AuthService {
   static get isSignedIn(): boolean {
     return AuthService.user !== null;
   }
+  static get isAdminSignedIn(): boolean {
+    if (AuthService.user.roles.includes('ROLE_ADMIN') && AuthService.user != null) {
+      return true;
+    }
+  }
 
   signin(email: string, password: string): Observable<any> {
     return this.httpClient.post(
