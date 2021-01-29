@@ -6,11 +6,12 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/mate
 import {ReactiveFormsModule} from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import {UserPartsModule} from '../shared/user-parts/user-parts.module';
+import { AuthComponent } from './auth.component';
 
 
 
 @NgModule({
-  declarations: [SigninComponent, SignupComponent],
+  declarations: [SigninComponent, SignupComponent, AuthComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

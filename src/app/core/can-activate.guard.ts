@@ -40,7 +40,7 @@ export class CanActivateGuard implements CanActivate {
             this.snackBar.open(' Vous devez être connecté pour accéder à cette page', 'Fermer', {
               duration: 2000,
             });
-            this.router.navigate(['auth/signin']);
+            this.router.navigate(['auth/auth']);
             return false;
           }
           // on vérifie que l'utilisateur est admin dans le cas où la router est dédié à des admins
@@ -49,7 +49,7 @@ export class CanActivateGuard implements CanActivate {
             this.snackBar.open(' Seul un administrateur peut avoir accès au profil', 'Fermer', {
               duration: 2000,
             });
-            this.router.navigate(['auth/signin']);
+            this.router.navigate(['auth/auth']);
             return false;
           }
           return true;
